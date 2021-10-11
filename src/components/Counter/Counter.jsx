@@ -1,5 +1,5 @@
 import { connect } from "react-redux"
-import { increment, decrement } from "redux/actions";
+import { increment, decrement } from "redux/counter/counter-actions";
 import { Container, BtnsContainer, Value } from "./Counter.styled";
 
 function Counter({ value, step, onIncrement, onDecrement }) {
@@ -24,8 +24,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onIncrement: () => dispatch(increment(5)),
-        onDecrement: () => dispatch(decrement(5)),
+        onIncrement: () => dispatch(increment(10)),
+        onDecrement: () => dispatch(decrement(10)),
     }
 }
 
